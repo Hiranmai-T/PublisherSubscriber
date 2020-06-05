@@ -3,9 +3,9 @@ var mysql = require("mysql");
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "password",
-    database: "pubsubtest",
-    port: 3306
+    password: //yourpassword,
+    database: "pubsubtest", //yourdatabase
+    port: //yourportnumber
 });
 
 var sendMessage = function (sid, message) {
@@ -108,35 +108,7 @@ class PubSubManager {
     });
 
     
-    // for (var topic in this.topics) {
-    //   var topicName = this.topics[topic];
-      
-    //   var sql = "select message from topic where topic= '"+topicName+"'";
-    //   con.query(sql, function (err, result) {
-    //     if (err) throw err;
-    //     //if results are there for a paticular query
-    //     if (result.length > 0) {
-    //       let message = result[0].message;
-    //       // If message is being published for a particular topic
-          
-    //       if (message) {
-    //         //fetch all the subscribers from subscriber table
-    //         //"UPDATE pubsubtest.topic SET message = '"+message+"' WHERE topic = '"+channel+"'";
-    //         // sql = `select sid as sid from subscriber where topic = '${topicName}'`;
-    //         sql = "select sid as sid from subscriber where topic = '"+topicName+"'";
-    //         con.query(sql, function (err, result) {
-    //           if (err) throw err;
-    //           console.log(result);
-    //           //for each subscriber send the message
-    //           for (var i = 0; i < result.length; i++) {
-    //             // global method to send data to subscriber
-    //             sendMessage(result[i].sid, message);
-    //           }
-    //         });
-    //       }
-    //     }
-    //   });
-    // }
+   
   }
 }
 module.exports = PubSubManager;
