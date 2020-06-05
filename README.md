@@ -4,5 +4,5 @@ A simple publisher subscriber system. A publisher can publish messages on variou
 To start, run 
     "node index.js" at command prompt.
 
-The publisher page is available at https://localhost:8000/pub.html
-The subscriber page is available at https://localhost:8000/sub.html
+The publisher page is available at https://localhost:3000/pub.html </br>
+The subscriber page is available at https://localhost:3000/sub.html
